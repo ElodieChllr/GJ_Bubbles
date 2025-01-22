@@ -29,6 +29,8 @@ public class ScoreManager : MonoBehaviour
     void Update()
     {
         score += verticalSpeed * Time.deltaTime * scoreMultiplier;
+
+        
         UpdateScore();
     }
 
@@ -54,8 +56,13 @@ public class ScoreManager : MonoBehaviour
 
     void UpdateScore()
     {
+        if (score > highScore)
+        {
+            highScore = score;
+        }
+
         txt_ScoreInGame.text = $"Score: {score:F2}";
-        txt_HighScore.text = $"HighScore: {highScore:F2}";
+        txt_HighScore.text = $"HighScore: {highScore:F2}";        
     }
 
     void Reset_HighScore()
