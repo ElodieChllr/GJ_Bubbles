@@ -18,15 +18,13 @@ public class PlayerController : MonoBehaviour
     InputAction jumpAction;
     public PlayerInput playerInput;
 
+    public static int money;
 
 
-    public GameObject skinOrange;
-    public GameObject skinRouge;
-    public GameObject skinBleu;
-    //public Transform Tr_spawnBackground;
-    //public Material backGround;
-    //public ScoreManager scoreManagerRef;
-    //private float startingHeight;
+    [HideInInspector]public GameObject skinOrange;
+    [HideInInspector]public GameObject skinRouge;
+    [HideInInspector]public GameObject skinBleu;
+
     void Start()
     {
         rb_player = GetComponent<Rigidbody2D>();
@@ -42,7 +40,6 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         PlayerMovement();
-        //float distance = t_player.position.y - startingHeight;
     }
 
 
@@ -55,23 +52,10 @@ public class PlayerController : MonoBehaviour
         if (jumpAction.IsPressed())
         {
             Debug.Log("pouette");
-            //rb_player.velocity = new Vector2(rb_player.velocity.x, 50);
         }
         else
         {
             rb_player.velocity = new Vector2(movement.x * horizontalSpeed,0);
         }
     }
-
-    //private void OnTriggerExit2D(Collider2D other)
-    //{
-    //    if (other.CompareTag("LastBackGround"))
-    //    {
-    //        other.GetComponentInParent<BackGroundSpawner>().SpawnNewBackground();            
-    //    }
-    //    if (other.CompareTag("End_BG"))
-    //    {
-    //        other.gameObject.SetActive(false);
-    //    }
-    //}
 }
