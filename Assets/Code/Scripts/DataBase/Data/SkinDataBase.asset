@@ -16,10 +16,7 @@ MonoBehaviour:
   - label: 1erSkin
     caption: 
     category: 0
-    sprite: {fileID: 0}
-    hasSpecialBonus: 0
-    Bonuslife: 0
-    availableBonusLives: 0
+    color: 0
     price: 1
     buyable: 1
     available: 0
@@ -27,10 +24,7 @@ MonoBehaviour:
   - label: 1erSkin
     caption: 
     category: 0
-    sprite: {fileID: 0}
-    hasSpecialBonus: 0
-    Bonuslife: 0
-    availableBonusLives: 0
+    color: 1
     price: 1
     buyable: 1
     available: 0
@@ -38,10 +32,7 @@ MonoBehaviour:
   - label: 1erSkin
     caption: 
     category: 0
-    sprite: {fileID: 0}
-    hasSpecialBonus: 0
-    Bonuslife: 0
-    availableBonusLives: 0
+    color: 2
     price: 1
     buyable: 1
     available: 0

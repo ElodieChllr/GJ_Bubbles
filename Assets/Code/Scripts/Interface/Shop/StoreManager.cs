@@ -23,6 +23,8 @@ public class StoreManager : MonoBehaviour
     [SerializeField] bool canBuy = true;
 
     public bool selected;
+    //public SkinData skinsData;
+    public PlayerController playerControllerRef;
     [SerializeField] public static List<SkinData> _slotDatas = new();
     
     void Start()
@@ -100,11 +102,57 @@ public class StoreManager : MonoBehaviour
         }
     }
 
+    public void EquipSkin()
+    {
+        SkinData selectedSkin = _slotDatas[0];
+
+
+        foreach (var skin in skinDataBaseRef.datas)
+        {
+            if (skin != selectedSkin)
+            {
+                skin.onPlayer = false;
+            }
+        }
+
+
+        if (selectedSkin.color == SkinData.ColorSkin.Orange)
+        {
+            playerControllerRef.skinOrange.SetActive(true);
+            playerControllerRef.skinBleu.SetActive(false);
+            playerControllerRef.skinRouge.SetActive(false);
+        }
+        if (selectedSkin.color == SkinData.ColorSkin.Bleu)
+        {
+            playerControllerRef.skinOrange.SetActive(false);
+            playerControllerRef.skinBleu.SetActive(true);
+            playerControllerRef.skinRouge.SetActive(false);
+        }
+        if (selectedSkin.color == SkinData.ColorSkin.Rouge)
+        {
+            playerControllerRef.skinOrange.SetActive(false);
+            playerControllerRef.skinBleu.SetActive(false);
+            playerControllerRef.skinRouge.SetActive(true);
+        }
+        //playerController.playerSpriteRenderer.color = _slotSkins[0].colorSkin;
+        //playerControllerRef.sr_player.sprite = _slotSkins[0].sprite;
+        //Debug.Log(_slotSkins[0].sprite);
+
+        //selectedSkin.onPlayer = true;
+
+        //if(selectedSkin.Bonuslife > 0)
+        //{
+        //    selectedSkin.availableBonusLives = selectedSkin.Bonuslife;
+        //}
+    }
+
+
+
     private void InitSlotBuy(SlotController slot, SkinData data)
     {
         SetMaskableGraphicValue(ref slot.txt_caption, data.caption);
         SetMaskableGraphicValue(ref slot.txtPrice, data.price);
-        SetMaskableGraphicValue(ref slot.img_Item, data.sprite);
+        //SetMaskableGraphicValue(ref slot.img_Item, data.sprite);
     }
 
     public void OnSlotSelected(SkinData data)
