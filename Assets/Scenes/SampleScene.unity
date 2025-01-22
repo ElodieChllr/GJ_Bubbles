@@ -898,8 +898,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 991410794191639960, guid: e50a180c084e89146be6f96179f77e33, type: 3}
-      propertyPath: m_VerticalScrollbar
-      value: 
+      propertyPath: m_Vertical
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 991410794191639960, guid: e50a180c084e89146be6f96179f77e33, type: 3}
+      propertyPath: m_MovementType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1003451510797359364, guid: e50a180c084e89146be6f96179f77e33, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -913,6 +917,22 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2079740005612623528, guid: e50a180c084e89146be6f96179f77e33, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222627986125285390, guid: e50a180c084e89146be6f96179f77e33, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222627986125285390, guid: e50a180c084e89146be6f96179f77e33, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222627986125285390, guid: e50a180c084e89146be6f96179f77e33, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3776237588885614329, guid: e50a180c084e89146be6f96179f77e33, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -921,6 +941,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 328577379}
+    - target: {fileID: 4640025333906526576, guid: e50a180c084e89146be6f96179f77e33, type: 3}
+      propertyPath: slotBuy
+      value: 
+      objectReference: {fileID: 6660698184934836955, guid: ee07f7011a963f04ca9f2fc03bb81f82, type: 3}
+    - target: {fileID: 5286075379047208950, guid: e50a180c084e89146be6f96179f77e33, type: 3}
+      propertyPath: m_Name
+      value: Pnl_Shop
+      objectReference: {fileID: 0}
     - target: {fileID: 7721857059718319834, guid: e50a180c084e89146be6f96179f77e33, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
