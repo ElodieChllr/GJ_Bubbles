@@ -30,7 +30,7 @@ Material:
     - _GradientForce: 0.25
     - _InvertedGradient: 1
     m_Colors:
-    - _SkyColor: {r: 0.22352943, g: 0.39607847, b: 0.6156863, a: 0}
+    - _SkyColor: {r: 0.3920879, g: 0.7148378, b: 0.8396226, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &1303569753563624003
 MonoBehaviour:
