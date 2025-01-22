@@ -18,7 +18,8 @@ public class PlayerController : MonoBehaviour
     InputAction jumpAction;
     public PlayerInput playerInput;
 
-    public static int money;
+    public static float money;
+    //private float score;
 
 
     [HideInInspector]public GameObject skinOrange;

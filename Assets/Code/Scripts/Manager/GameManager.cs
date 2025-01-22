@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public GameObject gO_PnlPause;
     public GameObject gO_PnlShop;
+
+    private bool isShop;
     void Start()
     {
         gO_PnlPause.SetActive(false);
@@ -32,8 +34,20 @@ public class GameManager : MonoBehaviour
 
     public void OpenShop()
     {
-        gO_PnlShop.SetActive(true);
-        gO_PnlPause.SetActive(false);
+        if (isShop)
+        {
+            Time.timeScale = 0f;
+            gO_PnlShop.SetActive(true);
+            gO_PnlPause.SetActive(false);
+            isShop = false;
+        }
+        else
+        {
+            Time.timeScale = 1f;
+            gO_PnlShop.SetActive(false);
+            isShop = true;
+        }
+        
     }
     public void CloseShop()
     {
