@@ -7,7 +7,8 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    public TextMeshProUGUI scoreText; 
+    public TextMeshProUGUI txt_ScoreInGame; 
+    public TextMeshProUGUI txt_scorePause;
     public float verticalSpeed = 10f; 
     public float scoreMultiplier = 0.001f; 
 
@@ -27,7 +28,8 @@ public class ScoreManager : MonoBehaviour
 
     void Update()
     {
-        score += verticalSpeed * Time.deltaTime * scoreMultiplier;        
+        score += verticalSpeed * Time.deltaTime * scoreMultiplier;
+        UpdateScore();
     }
 
     void GameOver()
@@ -52,8 +54,8 @@ public class ScoreManager : MonoBehaviour
 
     void UpdateScore()
     {
-        scoreText.text = $"Score: {score:F2} km";
-        txt_HighScore.text = $"HighScore: {highScore:F2} km";
+        txt_ScoreInGame.text = $"Score: {score:F2}";
+        txt_HighScore.text = $"HighScore: {highScore:F2}";
     }
 
     void Reset_HighScore()
