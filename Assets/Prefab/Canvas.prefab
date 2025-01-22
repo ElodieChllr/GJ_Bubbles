@@ -655,7 +655,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 475058610693082024}
   m_HandleRect: {fileID: 1074785718450013766}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 1.000001
   m_Size: 0.5376324
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1816,7 +1816,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4640025333906526576}
         m_TargetAssemblyTypeName: StoreManager, Assembly-CSharp
-        m_MethodName: OnBuy
+        m_MethodName: EquipSkin
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1860,8 +1860,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 354, y: 395}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 334.76318, y: 395}
+  m_SizeDelta: {x: 161.5262, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1037472542008083949
 CanvasRenderer:
@@ -1925,8 +1925,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2057,6 +2057,7 @@ MonoBehaviour:
   txt_money: {fileID: 1592418240319986405}
   canBuy: 1
   selected: 0
+  playerControllerRef: {fileID: 0}
 --- !u!1 &5443758690246767251
 GameObject:
   m_ObjectHideFlags: 0
@@ -2481,7 +2482,7 @@ GameObject:
   - component: {fileID: 2206496166217152445}
   - component: {fileID: 906357295865118482}
   m_Layer: 5
-  m_Name: Txt_Pause
+  m_Name: Txt_Shop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2926,7 +2927,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -860.00684, y: 0}
+  m_AnchoredPosition: {x: -860.0077, y: 0}
   m_SizeDelta: {x: 860.0068, y: 564.85}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2215161181354792004
