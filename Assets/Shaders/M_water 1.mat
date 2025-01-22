@@ -27,10 +27,10 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _alpha: 0.5
+    - _alpha: 0.2
     - _sineAmp: 1
     - _sineLength: 0.14
-    - _sineSpeed: 1
+    - _sineSpeed: 0.5
     m_Colors:
     - _Color: {r: 0.6084906, g: 0.9133899, b: 1, a: 1}
   m_BuildTextureStacks: []
