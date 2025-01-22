@@ -25,15 +25,15 @@ MonoBehaviour:
     caption: 
     category: 0
     color: 1
-    price: 1
+    price: 0
     buyable: 1
-    available: 0
+    available: 1
     onPlayer: 0
   - label: 1erSkin
     caption: 
     category: 0
     color: 2
-    price: 1
+    price: 0
     buyable: 1
-    available: 0
+    available: 1
     onPlayer: 0

@@ -81,25 +81,32 @@ public class StoreManager : MonoBehaviour
 
     public void OnBuy()
     {
-        if (currentMoney < _slotDatas[0].price)
-        {
-            canBuy = false;
-        }
+        //if (currentMoney < _slotDatas[0].price)
+        //{
+        //    canBuy = false;
+        //}
 
-        if (canBuy == true)
-        {
-            if (_slotDatas.Count <= 0)
-                return;
+        //if (canBuy == true)
+        //{
+        //    if (_slotDatas.Count <= 0)
+        //        return;
 
-            currentMoney -= _slotDatas[0].price;
-            _slotDatas[0].available = true;
-            if (_slotDatas[0].available == true)
-            {
-                Debug.Log("Available");
-            }
-            txt_money.text = currentMoney.ToString();
-            _slotDatas.Clear();
+        //    currentMoney -= _slotDatas[0].price;
+        //    _slotDatas[0].available = true;
+        //    if (_slotDatas[0].available == true)
+        //    {
+        //        Debug.Log("Available");
+        //    }
+        //    txt_money.text = currentMoney.ToString();
+        //    _slotDatas.Clear();
+        //}
+        _slotDatas[0].available = true;
+        if (_slotDatas[0].available == true)
+        {
+            Debug.Log("Available");
         }
+        txt_money.text = currentMoney.ToString();
+        _slotDatas.Clear();
     }
 
     public void EquipSkin()
@@ -115,25 +122,27 @@ public class StoreManager : MonoBehaviour
             }
         }
 
-
-        if (selectedSkin.color == SkinData.ColorSkin.Orange)
+        if(selectedSkin.available == true)
         {
-            playerControllerRef.skinOrange.SetActive(true);
-            playerControllerRef.skinBleu.SetActive(false);
-            playerControllerRef.skinRouge.SetActive(false);
-        }
-        if (selectedSkin.color == SkinData.ColorSkin.Bleu)
-        {
-            playerControllerRef.skinOrange.SetActive(false);
-            playerControllerRef.skinBleu.SetActive(true);
-            playerControllerRef.skinRouge.SetActive(false);
-        }
-        if (selectedSkin.color == SkinData.ColorSkin.Rouge)
-        {
-            playerControllerRef.skinOrange.SetActive(false);
-            playerControllerRef.skinBleu.SetActive(false);
-            playerControllerRef.skinRouge.SetActive(true);
-        }
+            if (selectedSkin.color == SkinData.ColorSkin.Orange)
+            {
+                playerControllerRef.skinOrange.SetActive(true);
+                playerControllerRef.skinBleu.SetActive(false);
+                playerControllerRef.skinRouge.SetActive(false);
+            }
+            if (selectedSkin.color == SkinData.ColorSkin.Bleu)
+            {
+                playerControllerRef.skinOrange.SetActive(false);
+                playerControllerRef.skinBleu.SetActive(true);
+                playerControllerRef.skinRouge.SetActive(false);
+            }
+            if (selectedSkin.color == SkinData.ColorSkin.Rouge)
+            {
+                playerControllerRef.skinOrange.SetActive(false);
+                playerControllerRef.skinBleu.SetActive(false);
+                playerControllerRef.skinRouge.SetActive(true);
+            }
+        }        
         //playerController.playerSpriteRenderer.color = _slotSkins[0].colorSkin;
         //playerControllerRef.sr_player.sprite = _slotSkins[0].sprite;
         //Debug.Log(_slotSkins[0].sprite);
