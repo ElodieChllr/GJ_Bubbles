@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb_player;
     private Transform t_player;
+    public SpriteRenderer sr_player;
     public float horizontalSpeed = 200f;
     public float verticalSpeed = 5f;
 
@@ -18,8 +19,13 @@ public class PlayerController : MonoBehaviour
     public PlayerInput playerInput;
 
 
+
+    public GameObject skinOrange;
+    public GameObject skinRouge;
+    public GameObject skinBleu;
     //public Transform Tr_spawnBackground;
-    //public SpriteRenderer backGround;
+    //public Material backGround;
+    //public ScoreManager scoreManagerRef;
     //private float startingHeight;
     void Start()
     {

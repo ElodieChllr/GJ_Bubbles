@@ -6,8 +6,6 @@ public class GameManager : MonoBehaviour
 {
     public GameObject gO_PnlPause;
     public GameObject gO_PnlShop;
-
-    private bool isPause;
     void Start()
     {
         gO_PnlPause.SetActive(false);
@@ -22,14 +20,12 @@ public class GameManager : MonoBehaviour
 
     public void OpenPause()
     {
-        isPause = true;
         Time.timeScale = 0f;
         gO_PnlPause.SetActive(true);
     }
 
     public void ClosePause()
     {
-        isPause = false;
         Time.timeScale = 1f;
         gO_PnlPause.SetActive(false);
     }

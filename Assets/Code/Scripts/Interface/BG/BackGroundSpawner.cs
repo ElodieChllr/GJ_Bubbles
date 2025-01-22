@@ -6,6 +6,8 @@ public class BackGroundSpawner : MonoBehaviour
 {
     public GameObject backGround;
 
+
+
     public float speed = 4f;
     private Vector3 StartPosition;
 

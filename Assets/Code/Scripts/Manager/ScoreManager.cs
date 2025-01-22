@@ -12,7 +12,7 @@ public class ScoreManager : MonoBehaviour
     public float verticalSpeed = 10f; 
     public float scoreMultiplier = 0.001f; 
 
-    private float score;
+    public float score;
 
 
     [Header("HighScore")]
