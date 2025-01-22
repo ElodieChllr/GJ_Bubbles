@@ -27,10 +27,10 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _GradientForce: 0.25
+    - _GradientForce: 1
     - _InvertedGradient: 1
     m_Colors:
-    - _SkyColor: {r: 0.3920879, g: 0.7148378, b: 0.8396226, a: 0}
+    - _SkyColor: {r: 0.20392159, g: 0.52156866, b: 0.8588236, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &1303569753563624003
 MonoBehaviour:

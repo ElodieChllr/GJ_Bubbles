@@ -19,8 +19,9 @@ public class PlayerController : MonoBehaviour
     public PlayerInput playerInput;
 
     public static float money;
+    private float lastYPosition;
     //private float score;
-
+    PieceManager pieceManagerRef;
 
     [HideInInspector]public GameObject skinOrange;
     [HideInInspector]public GameObject skinRouge;
@@ -41,6 +42,12 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         PlayerMovement();
+        float currentY = transform.position.y;
+        if (Mathf.Abs(currentY - lastYPosition) >= 5f)
+        {
+            pieceManagerRef.SpawnPieces();
+            lastYPosition = currentY;
+        }
     }
 
 

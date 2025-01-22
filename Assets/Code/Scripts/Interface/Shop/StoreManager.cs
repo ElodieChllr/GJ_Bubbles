@@ -81,32 +81,32 @@ public class StoreManager : MonoBehaviour
 
     public void OnBuy()
     {
-        //if (currentMoney < _slotDatas[0].price)
-        //{
-        //    canBuy = false;
-        //}
-
-        //if (canBuy == true)
-        //{
-        //    if (_slotDatas.Count <= 0)
-        //        return;
-
-        //    currentMoney -= _slotDatas[0].price;
-        //    _slotDatas[0].available = true;
-        //    if (_slotDatas[0].available == true)
-        //    {
-        //        Debug.Log("Available");
-        //    }
-        //    txt_money.text = currentMoney.ToString();
-        //    _slotDatas.Clear();
-        //}
-        _slotDatas[0].available = true;
-        if (_slotDatas[0].available == true)
+        if (currentMoney < _slotDatas[0].price)
         {
-            Debug.Log("Available");
+            canBuy = false;
         }
-        txt_money.text = currentMoney.ToString();
-        _slotDatas.Clear();
+
+        if (canBuy == true)
+        {
+            if (_slotDatas.Count <= 0)
+                return;
+
+            currentMoney -= _slotDatas[0].price;
+            _slotDatas[0].available = true;
+            if (_slotDatas[0].available == true)
+            {
+                Debug.Log("Available");
+            }
+            txt_money.text = currentMoney.ToString();
+            _slotDatas.Clear();
+        }
+        //_slotDatas[0].available = true;
+        //if (_slotDatas[0].available == true)
+        //{
+        //    Debug.Log("Available");
+        //}
+        //txt_money.text = currentMoney.ToString();
+        //_slotDatas.Clear();
     }
 
     public void EquipSkin()

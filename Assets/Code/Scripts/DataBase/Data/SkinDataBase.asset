@@ -14,26 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   datas:
   - label: 1erSkin
-    caption: 
+    caption: Skin de base
     category: 0
     color: 0
     price: 1
-    buyable: 1
-    available: 0
+    buyable: 0
+    available: 1
     onPlayer: 0
-  - label: 1erSkin
-    caption: 
+  - label: Skin Rouge
+    caption: Skin Rouge
     category: 0
     color: 1
-    price: 0
+    price: 1
     buyable: 1
     available: 1
     onPlayer: 0
-  - label: 1erSkin
-    caption: 
+  - label: Skin Bleu
+    caption: Skin Bleu
     category: 0
     color: 2
-    price: 0
+    price: 15
     buyable: 1
-    available: 1
+    available: 0
     onPlayer: 0
