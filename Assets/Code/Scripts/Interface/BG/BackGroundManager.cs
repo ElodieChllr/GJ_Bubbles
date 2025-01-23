@@ -20,8 +20,8 @@ public class BackGroundManager : MonoBehaviour
     private int currentValeur;
 
 
-    public GameObject vague;
-    Animator vagueAnimator;
+    public SpriteRenderer vague;
+    //Animator vagueAnimator;
     void Start()
     {
        
@@ -30,7 +30,7 @@ public class BackGroundManager : MonoBehaviour
 
 
         currentValeur = 0;
-        vagueAnimator = vague.GetComponent<Animator>();
+        //vagueAnimator = vague.GetComponent<Animator>();
 
 
         UpdateBackground();
@@ -55,7 +55,7 @@ public class BackGroundManager : MonoBehaviour
 
         if(currentValeur == 5000)
         {
-            vagueAnimator.SetBool("EndWater",true);
+            //vagueAnimator.SetBool("EndWater",true);
         }
 
         if (currentValeur <= oceanMaxValeur)

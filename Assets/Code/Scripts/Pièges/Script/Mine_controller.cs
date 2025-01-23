@@ -29,6 +29,7 @@ public class Mine_controller : MonoBehaviour
         {
             Debug.Log("touché");
             collision.gameObject.SetActive(false);
+            Time.timeScale = 0f;
         }
     }
 }

@@ -62,7 +62,7 @@ public class ScoreManager : MonoBehaviour
         }
 
         txt_ScoreInGame.text = $"Score: {score:F2}";
-        txt_HighScore.text = $"HighScore: {highScore:F2}";        
+        txt_HighScore.text = $"{highScore:F2}";        
     }
 
     void Reset_HighScore()

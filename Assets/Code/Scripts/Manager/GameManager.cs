@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
         gO_PnlPause.SetActive(false);
     }
 
-    public void OpenShop()
+    public void OpenCloseShop()
     {
         if (isShop)
         {
@@ -48,11 +48,6 @@ public class GameManager : MonoBehaviour
             isShop = true;
         }
         
-    }
-    public void CloseShop()
-    {
-        gO_PnlShop.SetActive(false);
-        gO_PnlPause.SetActive(true);
     }
 
     public void MyLoadScene(int sceneId)
