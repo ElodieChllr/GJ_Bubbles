@@ -26,7 +26,7 @@ public class SkinData
 
     public ITEM_CATEGORIES category;
     public ColorSkin color; 
-    //public Sprite sprite;
+    public Sprite sprite;
     //public Sprite icon;
     //public Color colorSkin;
 

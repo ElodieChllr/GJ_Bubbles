@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
@@ -10,7 +11,10 @@ public class EnemyManager : MonoBehaviour
     public float spawnInterval = 5f; // Temps entre deux spawns
     public float spawnChance = 0.8f; // Probabilité qu'un ennemi apparaisse (entre 0 et 1)
 
-    private float elapsedTime = 0f; // Temps écoulé depuis le dernier spawn
+    public float elapsedTime = 0f; // Temps écoulé depuis le dernier spawn
+
+    public GameObject pnl_GameOver;
+    public ScoreManager scoreManagerRef;
 
     private void Update()
     {

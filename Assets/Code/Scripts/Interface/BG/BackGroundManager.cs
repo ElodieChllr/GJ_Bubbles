@@ -19,13 +19,14 @@ public class BackGroundManager : MonoBehaviour
     private Renderer _renderer;
     private int currentValeur;
 
-
-    public SpriteRenderer vague;
+    public EnemyManager enemyManagerRef;
+    public GameObject vague;
+    public GameObject waterBackground;
     //Animator vagueAnimator;
     void Start()
     {
-       
-        _renderer = GetComponent<Renderer>();
+        enemyManagerRef = FindAnyObjectByType<EnemyManager>();
+         _renderer = GetComponent<Renderer>();
         propertyBlock = new MaterialPropertyBlock();
 
 
@@ -53,10 +54,11 @@ public class BackGroundManager : MonoBehaviour
         float phaseScoreMin = 0f;
         float phaseScoreMax = 1f;
 
-        if(currentValeur == 5000)
-        {
-            //vagueAnimator.SetBool("EndWater",true);
-        }
+        //if(currentValeur == 5000)
+        //{
+        //    vague.SetActive(false);
+        //    waterBackground.SetActive(false);
+        //}
 
         if (currentValeur <= oceanMaxValeur)
         {
@@ -68,6 +70,7 @@ public class BackGroundManager : MonoBehaviour
         }
         else if (currentValeur <= skyMaxValeur)
         {
+            enemyManagerRef.spawnInterval = 3.5f;
             // Phase 2 : Ciel
             startColor = skyStartColor;
             endColor = skyEndColor;
@@ -76,6 +79,7 @@ public class BackGroundManager : MonoBehaviour
         }
         else
         {
+            enemyManagerRef.spawnInterval = 1f;
             // Phase 3 : Espace
             startColor = spaceStartColor;
             endColor = spaceEndColor;

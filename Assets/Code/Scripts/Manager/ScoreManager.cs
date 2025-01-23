@@ -9,6 +9,8 @@ public class ScoreManager : MonoBehaviour
 {
     public TextMeshProUGUI txt_ScoreInGame; 
     public TextMeshProUGUI txt_scorePause;
+    public TextMeshProUGUI txt_scoreGO;
+
     public float verticalSpeed = 10f; 
     public float scoreMultiplier = 0.001f; 
 
@@ -17,13 +19,16 @@ public class ScoreManager : MonoBehaviour
 
     [Header("HighScore")]
     public TextMeshProUGUI txt_HighScore;
+    public TextMeshProUGUI txt_HighScoreGO;
     private static float highScore;
     private string hightScoreKey = "HighScore";
 
     void Start()
     {
-        score = 0;
-        int savedHighScore = PlayerPrefs.GetInt("BestScore", 0);
+        Time.timeScale = 1f;
+        //score = 0;
+        Debug.Log(highScore);
+        UpdateBestScoreText(highScore);
     }
 
     void Update()
@@ -34,7 +39,7 @@ public class ScoreManager : MonoBehaviour
         UpdateScore();
     }
 
-    void GameOver()
+    public void GameOver()
     {
         if (score > highScore)
         {
@@ -51,7 +56,9 @@ public class ScoreManager : MonoBehaviour
 
     void UpdateBestScoreText(float newBestScore)
     {
-        txt_HighScore.text = newBestScore.ToString();
+       // txt_HighScore.text = newBestScore.ToString();
+        txt_HighScore.text = $"{highScore:F2}";
+        txt_HighScoreGO.text = $"{highScore:F2}";
     }
 
     void UpdateScore()
@@ -61,11 +68,13 @@ public class ScoreManager : MonoBehaviour
             highScore = score;
         }
 
-        txt_ScoreInGame.text = $"Score: {score:F2}";
-        txt_HighScore.text = $"{highScore:F2}";        
+        txt_ScoreInGame.text = $" {score:F2}";
+        txt_HighScore.text = $"{highScore:F2}";
+        txt_scoreGO.text = $" {score:F2}";
+        txt_HighScoreGO.text = $"{highScore:F2}";
     }
 
-    void Reset_HighScore()
+    public void Reset_HighScore()
     {
         highScore = 0;
         UpdateBestScoreText(highScore);

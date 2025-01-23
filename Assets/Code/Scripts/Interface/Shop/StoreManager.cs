@@ -100,13 +100,6 @@ public class StoreManager : MonoBehaviour
             txt_money.text = currentMoney.ToString();
             _slotDatas.Clear();
         }
-        //_slotDatas[0].available = true;
-        //if (_slotDatas[0].available == true)
-        //{
-        //    Debug.Log("Available");
-        //}
-        //txt_money.text = currentMoney.ToString();
-        //_slotDatas.Clear();
     }
 
     public void EquipSkin()
@@ -161,7 +154,7 @@ public class StoreManager : MonoBehaviour
     {
         SetMaskableGraphicValue(ref slot.txt_caption, data.caption);
         SetMaskableGraphicValue(ref slot.txtPrice, data.price);
-        //SetMaskableGraphicValue(ref slot.img_Item, data.sprite);
+        SetMaskableGraphicValue(ref slot.img_Item, data.sprite);
     }
 
     public void OnSlotSelected(SkinData data)

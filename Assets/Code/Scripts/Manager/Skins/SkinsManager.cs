@@ -121,7 +121,7 @@ public class SkinsManager : MonoBehaviour
     private void InitSlotBuy(SlotController slot, SkinData data)
     {
         SetMaskableGraphicValue(ref slot.txt_caption, data.caption);
-       // SetMaskableGraphicValue(ref slot.img_Item, data.sprite);
+        SetMaskableGraphicValue(ref slot.img_Item, data.sprite);
     }
 
     private void SetMaskableGraphicValue(ref MaskableGraphic mg, object value)

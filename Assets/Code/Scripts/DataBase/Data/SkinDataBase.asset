@@ -17,22 +17,25 @@ MonoBehaviour:
     caption: Skin de base
     category: 0
     color: 0
+    sprite: {fileID: 532635577, guid: 098de7fbccddbfd4f904aa3077faa997, type: 3}
     price: 1
-    buyable: 0
+    buyable: 1
     available: 1
     onPlayer: 0
   - label: Skin Rouge
     caption: Skin Rouge
     category: 0
     color: 1
-    price: 1
+    sprite: {fileID: 2048010271, guid: 47cbd5c03a0f5b24a971272a6f343013, type: 3}
+    price: 5
     buyable: 1
-    available: 1
+    available: 0
     onPlayer: 0
   - label: Skin Bleu
     caption: Skin Bleu
     category: 0
     color: 2
+    sprite: {fileID: -944925090, guid: ed93d405232fdbf47a8b99772a8fa092, type: 3}
     price: 15
     buyable: 1
     available: 0

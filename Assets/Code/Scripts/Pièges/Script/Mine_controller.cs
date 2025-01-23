@@ -4,22 +4,12 @@ using UnityEngine;
 
 public class Mine_controller : MonoBehaviour
 {
-    // Start is called before the first frame update
+    GameObject pnl_GameOver;
+    ScoreManager scoreManagerRef;
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        
+        pnl_GameOver = FindAnyObjectByType<EnemyManager>().pnl_GameOver;
+        scoreManagerRef = FindAnyObjectByType<EnemyManager>().scoreManagerRef;
     }
 
 
@@ -29,7 +19,9 @@ public class Mine_controller : MonoBehaviour
         {
             Debug.Log("touché");
             collision.gameObject.SetActive(false);
+            pnl_GameOver.SetActive(true);
             Time.timeScale = 0f;
+            scoreManagerRef.GameOver();
         }
     }
 }
